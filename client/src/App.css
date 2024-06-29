@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card-container{
+    display: flex;
+justify-content: center;
+}
+.card{
+    text-align: center;
+}
