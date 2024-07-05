@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const emailValidator = require("email-validator");
 const userModel = require("../models/user.model")
-
+const { body, validationResult } = require('express-validator');
 
 const login = async (req, res) => {
   const { email, password } = req.body;

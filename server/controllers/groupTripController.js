@@ -1,5 +1,5 @@
 const GroupTrip = require('../models/Group.model');
-
+const { body, validationResult } = require('express-validator');
 // Controller function to create a new group trip
 const createGroupTrip = async (req, res) => {
     console.log(req.body);

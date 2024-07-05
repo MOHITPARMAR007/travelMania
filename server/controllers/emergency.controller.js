@@ -1,5 +1,6 @@
 const userModel = require("../models/user.model");
 const nodemailer = require("nodemailer");
+const { body, validationResult } = require('express-validator');
 const handleEmergency = async (req, res) => {
 try{
   const { user } = req.body;
