@@ -9,8 +9,12 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const GroupTripForm = () => {
+
+  const navigate = useNavigate();
+
   const validationSchema = Yup.object().shape({
     tripPostBy: Yup.string().required('Trip post by is required'),
     description: Yup.string().required('Description is required'),
@@ -18,17 +22,17 @@ const GroupTripForm = () => {
     ContactNumber: Yup.string().required('Contact number is required'),
     startDate: Yup.date().required('Start date is required'),
     endDate: Yup.date().required('End date is required'),
-    groupMembers: Yup.array().of(
-      Yup.object().shape({
-        userId: Yup.string().required('User ID is required'),
-        details: Yup.object().shape({
-          numberOfMembers: Yup.number().required('Number of members is required'),
-          NumberOfMales: Yup.number().required('Number of males is required'),
-          NumberOfFemales: Yup.number().required('Number of females is required'),
-        }),
-        personalId: Yup.string().required('Personal ID is required'),
-      })
-    ).required('Group members are required'),
+    // groupMembers: Yup.array().of(
+    //   Yup.object().shape({
+    //     userId: Yup.string().required('User ID is required'),
+    //     details: Yup.object().shape({
+    //       numberOfMembers: Yup.number().required('Number of members is required'),
+    //       NumberOfMales: Yup.number().required('Number of males is required'),
+    //       NumberOfFemales: Yup.number().required('Number of females is required'),
+    //     }),
+    //     personalId: Yup.string().required('Personal ID is required'),
+    //   })
+    // ).required('Group members are required'),
     createdBy: Yup.string().required('Created by user ID is required'),
   });
 
