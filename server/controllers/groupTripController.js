@@ -16,7 +16,7 @@ const createGroupTrip = async (req, res) => {
     } = req.body;
 
     // Create new GroupTrip object
-    const newGroupTrip = new GroupTrip({
+    const savedGroupTrip = await GroupTrip.create({
       tripPostBy,
       description,
       destination,
@@ -28,7 +28,7 @@ const createGroupTrip = async (req, res) => {
     });
 
     // Save the new group trip to the database
-    const savedGroupTrip = await newGroupTrip.save();
+  
 
     res.status(201).json(savedGroupTrip);
   } catch (error) {
