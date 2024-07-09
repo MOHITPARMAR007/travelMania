@@ -23,7 +23,7 @@ try{
   // Email content
   const mailOptions = {
     from: "your_email@example.com",
-    to: "lakshmankumar2603@gmail.com",
+    to: "mohitparmar928@gmail.com",
     subject: "Emergency User Information",
     html: `<p>User Details:</p><p>Name: ${firstName}</p><p>Email: ${email}</p>`,
   };

@@ -20,6 +20,7 @@ const PORT = process.env.PORT || 5001;
 
 app.use("/emergency", emergencyRoute);
 app.use("/api", groupTripRoutes);
+
 app.use("/", userRoutes);
 
 app.listen(PORT, () => {
