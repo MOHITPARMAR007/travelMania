@@ -13,6 +13,7 @@ import AboutUs from "../src/components/AboutUs.jsx";
 import Home from "./components/home/Home.jsx";
 import Emergency from "./components/Emergency.jsx";
 import ContactForm from "./components/ContactUs.jsx";
+import JoinTrip from "./components/JoinTrip.jsx";
 
 const store = configureStore({ reducer: authReducer });
 
@@ -30,10 +31,7 @@ const appRouter = createBrowserRouter([
         path: "",
         element: <Home />
       },
-      {
-        path: " api/grouptrips",
-        element: <Home />
-      },
+      
 
       {
         path: "register",
@@ -48,10 +46,6 @@ const appRouter = createBrowserRouter([
         element: <AboutUs/>
       },
       {
-        path: "groupTripPost",
-        element: <GroupTripForm/>,
-      },
-      {
         path: "groupTripForm",
         element: <GroupTripForm/>,
       },
@@ -59,7 +53,10 @@ const appRouter = createBrowserRouter([
         path: "emergency",
         element: <Emergency />,
       },
-    
+      {
+        path: "grouptrips",
+        element: <JoinTrip />,
+      },
     ],
   },
 ]);

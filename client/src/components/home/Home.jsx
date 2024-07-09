@@ -44,7 +44,7 @@ function Home() {
                 "Find fellow travelers and connect with them. Join them on their journey."
               }
               action={"Get started"}
-              path={""}
+              path={"/grouptrips"}
             />
             <Card
               className="card"
