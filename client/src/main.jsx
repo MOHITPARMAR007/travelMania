@@ -14,6 +14,9 @@ import Home from "./components/home/Home.jsx";
 import Emergency from "./components/Emergency.jsx";
 import ContactForm from "./components/ContactUs.jsx";
 import JoinTrip from "./components/JoinTrip.jsx";
+import RenterProfile from "./components/RenterProfiles/RentTourGuideForm.jsx";
+import RentTourGuideForm from "./components/RenterProfiles/RentTourGuideForm.jsx";
+import TourGuideList from "./components/RenterProfiles/TourGuideList.jsx";
 
 const store = configureStore({ reducer: authReducer });
 
@@ -46,6 +49,10 @@ const appRouter = createBrowserRouter([
         element: <AboutUs/>
       },
       {
+        path: "EarnWithUS",
+        element: <RentTourGuideForm/>
+      },
+      {
         path: "groupTripForm",
         element: <GroupTripForm/>,
       },
@@ -56,6 +63,10 @@ const appRouter = createBrowserRouter([
       {
         path: "grouptrips",
         element: <JoinTrip />,
+      },
+      {
+        path: "TourGuideList",
+        element: <TourGuideList/>,
       },
     ],
   },

@@ -56,6 +56,7 @@ function Home() {
                 "Book a local guide for your trip. Experience the city like a local."
               }
               action={"Rent now"}
+              path={"/TourGuideList"}
             />
           </div>
         </div>

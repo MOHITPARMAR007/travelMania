@@ -51,6 +51,11 @@ function Navbar() {
                 Contact
               </Link>
             </li>
+            <li onClick={removeActive}>
+              <Link to="/EarnWithUS" className={`${styles.navLink}`}>
+              EarnWithUS
+              </Link>
+            </li>
             
           </ul>
           <div
